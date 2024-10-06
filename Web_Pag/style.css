@@ -1,0 +1,76 @@
+/* Estilos para la sección de contacto */
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+}
+
+.contact-item img {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.contact-description {
+    color: #fff;
+}
+
+.contact-description h3 {
+    margin: 0;
+    color: #00bcd4;
+}
+
+.contact-description p {
+    margin: 5px 0 0 0;
+}
+
+#nombre-contacto {
+    font-size: 50px;
+    color: #00bcd4;
+    
+}
+#info{
+    font-size: 25px;
+    color: #ffffff;
+
+}
+
+.contactos {
+    font-size: 80px;
+    font-family: Vegur;
+    color: #f8f8f8;
+    margin: 0 auto;  
+    text-align: center;    /* Centra el texto horizontalmente */
+    margin-top: 20px;      /* Ajusta el espacio superior */
+    margin-bottom: 20px;   /* Ajusta el espacio inferior */
+    
+}
+
+/* Estilos para la caja */
+.box {
+    max-width: 800px;                  /* Anchura máxima de la caja */
+    margin: 0 auto;                    /* Centrar horizontalmente */
+    padding: 20px;                     /* Espacio interno */
+    background-color: rgba(0, 0, 0, 0.95); /* Fondo semi-transparente */
+    border: 1px solid #00bcd4;         /* Borde de la caja */
+    border-radius: 10px;               /* Esquinas redondeadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra */
+}
+
+.contact-title {
+    text-align: center;    /* Centra el texto horizontalmente */
+    margin-top: 20px;      /* Ajusta el espacio superior */
+    margin-bottom: 20px;   /* Ajusta el espacio inferior */
+    font-size: 32px;       /* Tamaño de fuente del título */
+    color: #00bcd4;        /* Color del texto */
+}
+
+
