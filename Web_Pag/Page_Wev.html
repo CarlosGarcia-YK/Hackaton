@@ -1,104 +1,62 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador de Sitio NASA</title>
+    <title>NASA Earthquake Detection Challenge</title>
     <link rel="stylesheet" href="web_css.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #000;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #1a1a1a;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        header img {
-            height: 50px;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .main-content {
-            padding: 40px;
-        }
-        .mission {
-            margin-bottom: 40px;
-        }
-        .mission h2 {
-            color: #00bcd4;
-        }
-        footer {
-            background-color: #1a1a1a;
-            padding: 20px;
-            text-align: center;
-            margin-top: 40px;
-            color: #777;
-        }
-    </style>
 </head>
-
-
-
-
 <body>
+    <!-- Header -->
     <header>
-        <div>
-            <img src="image\Logo.jpg" alt="Logo de la NASA">
+        <div class="logo">
+            <img src="image\Logo.jpg" alt="NASA Logo">
+            <h1>NASA Seismic Challenge</h1>
         </div>
         <nav>
             <ul>
-                <li><a href="Page_Wev.html">Inicio</a></li>
-                <li><a href="#Simulador">Simulador</a></li>
-                <li><a href="Contacto.html">Contacto</a></li>
-
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#challenge">Challenge</a></li>
+                <li><a href="Contacto.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    
-    <section class="main-content">
-        <section id="misiones" class="mission">
-            <h2>Actual Challenge</h2>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h2>Unlock the Mysteries Beneath the Surface</h2>
+            <p>Join us in to show you how  we solve the sismic space challenge.</p>
+            <a href="#challenge" class="btn">Learn More</a>
+        </section>
+
+        <!-- Challenge Section -->
+        <section id="challenge" class="challenge">
+            <h2>Current Challenge</h2>
             <article>
                 <h3>Seismic Detection Across the Solar System</h3>
-                <p id="mission_text">Planetary seismology missions struggle with the power requirements necessary to send continuous seismic data back to Earth. But only a fraction of this data is scientifically useful! Instead of sending back all the data collected, what if we could program a lander to distinguish signals from noise, and send back only the data we care about? Your challenge is to write a computer program to analyze real data from the Apollo missions and the Mars InSight Lander to identify seismic quakes within the noise!</p>
-            </article>
-           
-        </section>
-        
-        <section id="noticias" class="news">
-            <h2>Últimas Noticias de Ciencia</h2>
-            <article>
-                <h3>Descubrimientos recientes en el planeta rojo</h3>
-                <p>Los científicos de la NASA han descubierto nuevas evidencias de agua en Marte, lo cual proporciona más indicios de que el planeta pudo haber albergado vida en algún momento.</p>
-            </article>
-            <article>
-                <h3>El telescopio James Webb: Una nueva era en la astronomía</h3>
-                <p>El telescopio espacial James Webb ha capturado imágenes del universo con una resolución sin precedentes, ayudando a desvelar los secretos del cosmos.</p>
+                <p>
+                    Planetary seismology missions struggle with the power requirements necessary to send continuous seismic data back to Earth. But only a fraction of this data is scientifically useful! Instead of sending back all the data collected, what if we could program a lander to distinguish signals from noise and send back only the data we care about? Your challenge is to write a computer program to analyze real data from the Apollo missions and the Mars InSight Lander to identify seismic quakes within the noise!
+                </p>
+                <a href="https://www.nasa.gov/solve-challenge" class="btn">Join the Challenge</a>
             </article>
         </section>
-    </section>
-    
+
+        <!-- Presentation Section -->
+        <section class="presentation">
+            <h2>Interactive Presentation</h2>
+            <div class="presentation-wrapper">
+                <a href="https://www.canva.com/design/DAGSvgnC_Os/view?utm_content=DAGSvgnC_Os&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank" rel="noopener">
+                    <img src="image\\Presentation.png" alt="Interactive Presentation">
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
     <footer>
-        <p>Simulador del Sitio Web de la NASA - Hecho con fines educativos</p>
+        <p>WebPage Hackathon NASA Mérida - 2024</p>
     </footer>
 </body>
 </html>
