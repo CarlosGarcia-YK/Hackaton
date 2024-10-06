@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url('image\\carina08_hubble_960.jpg');
+    background-image: url('image/carina08_hubble_960.jpg');
     background-size: cover;
     background-attachment: fixed;
     color: #ffffff;
@@ -58,46 +58,6 @@ nav ul li a:hover {
     color: #00bcd4;
 }
 
-/* Hero Section */
-.hero {
-    text-align: center;
-    padding: 80px 20px;
-    background-image: url('images/earthquake_space.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    color: #ffffff;
-}
-
-.hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 50, 0.6);
-}
-
-.hero h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    position: relative;
-    z-index: 1;
-}
-
-.hero p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-    position: relative;
-    z-index: 1;
-}
-
-.hero .btn {
-    position: relative;
-    z-index: 1;
-}
-
 /* Main Content */
 .main-content {
     padding: 60px 20px;
@@ -105,34 +65,42 @@ nav ul li a:hover {
     margin: 0 auto;
 }
 
-/* Challenge Section */
-.challenge {
+/* Upload Section */
+.upload-section {
     background-color: rgba(0, 0, 50, 0.85);
     padding: 40px;
     border-radius: 10px;
     margin-bottom: 60px;
 }
 
-.challenge h2 {
+.upload-section h2 {
     color: #00bcd4;
     font-size: 2.25rem;
     text-align: center;
     margin-bottom: 30px;
 }
 
-.challenge h3 {
-    font-size: 1.75rem;
-    margin-bottom: 20px;
-}
-
-.challenge p {
+.upload-section p {
     font-size: 1rem;
     line-height: 1.8;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-.challenge .btn {
+.upload-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upload-section input[type="file"] {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.upload-section .btn {
     display: inline-block;
-    margin-top: 30px;
     padding: 15px 30px;
     background-color: #00bcd4;
     color: #ffffff;
@@ -141,42 +109,19 @@ nav ul li a:hover {
     font-weight: bold;
     font-size: 1rem;
     transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
 }
 
-.challenge .btn:hover {
+.upload-section .btn:hover {
     background-color: #008c9e;
     transform: translateY(-5px);
 }
 
-/* Presentation Section */
-.presentation {
+#output {
+    margin-top: 30px;
+    font-size: 1.5rem;
+    color: #ffffff;
     text-align: center;
-    margin-bottom: 60px;
-}
-
-.presentation h2 {
-    color: #00bcd4;
-    font-size: 2.25rem;
-    margin-bottom: 30px;
-}
-
-.presentation .presentation-wrapper {
-    display: inline-block;
-    border: 5px solid #00bcd4;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s;
-    max-width: 100%;
-}
-
-.presentation .presentation-wrapper:hover {
-    transform: scale(1.05);
-}
-
-.presentation .presentation-wrapper img {
-    max-width: 100%;
-    height: auto;
-    display: block;
 }
 
 /* Footer */
@@ -198,6 +143,7 @@ footer {
     font-weight: bold;
     font-size: 1rem;
     transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -222,32 +168,20 @@ footer {
         margin: 10px 0;
     }
 
-    .hero {
-        padding: 60px 20px;
-    }
-
-    .hero h2 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1.25rem;
-    }
-
     .main-content {
         padding: 40px 15px;
     }
 
-    .challenge h2,
-    .presentation h2 {
+    .upload-section h2 {
         font-size: 1.75rem;
     }
 
-    .challenge h3 {
-        font-size: 1.5rem;
+    .upload-section p {
+        font-size: 1rem;
     }
 
-    .challenge p {
+    .upload-section .btn {
         font-size: 1rem;
+        padding: 12px 25px;
     }
 }

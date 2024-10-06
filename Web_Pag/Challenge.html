@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Your Seismic Data - NASA Seismic Challenge</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include the CSS file -->
+    <link rel="stylesheet" href="challenge.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="image\Logo.jpg">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/Logo.jpg" alt="NASA Logo">
+            <h1>NASA Seismic Challenge</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Page_Wev.html">Home</a></li>
+                <li><a href="Challenge.html">Challenge</a></li>
+                <li><a href="Contacto.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Upload Section -->
+        <section class="upload-section">
+            <h2>Upload Your Seismic Data</h2>
+            <p>
+                Please upload your CSV file containing seismic data. The file must have the headers <strong>"Tiempo"</strong> and <strong>"Muestras"</strong>. Only CSV files with these specific headers are accepted.
+            </p>
+            <form id="uploadForm">
+                <input type="file" id="csvFile" accept=".csv" required>
+                <button type="submit" class="btn">Upload and Process</button>
+            </form>
+            <!-- Placeholder for output -->
+            <div id="output">
+                <!-- This will display the output image or text -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>WebPage Hackathon NASA Mérida - 2024</p>
+    </footer>
+
+    <!-- JavaScript for client-side validation -->
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const fileInput = document.getElementById('csvFile');
+            const file = fileInput.files[0];
+
+            if (!file) {
+                alert('Please select a file.');
+                return;
+            }
+
+            // Check file extension
+            const fileName = file.name;
+            const fileExtension = fileName.split('.').pop().toLowerCase();
+            if (fileExtension !== 'csv') {
+                alert('Only CSV files are allowed.');
+                return;
+            }
+
+            // Read and validate CSV headers
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const contents = e.target.result;
+                const allTextLines = contents.split(/\r\n|\n/);
+                const headers = allTextLines[0].split(',');
+
+                if (headers.includes('Tiempo') && headers.includes('Muestras')) {
+                    // File is valid
+                    // For now, display placeholder text
+                    document.getElementById('output').innerHTML = '<p>1</p>';
+                } else {
+                    alert('The CSV file must contain "Tiempo" and "Muestras" headers.');
+                }
+            };
+            reader.readAsText(file);
+        });
+    </script>
+</body>
+</html>
